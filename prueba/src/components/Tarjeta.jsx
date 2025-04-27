@@ -1,16 +1,11 @@
 import "./tarjeta.css";
-import Button from "./Button";
 
-function Tarjeta({ titulo, descripcion, botonTexto }) {
+function Tarjeta({ titulo, descripcion, botonTexto, onClick }) {
   return (
     <div className="tarjeta">
-      <h3>{titulo}</h3>
+      <h2>{titulo}</h2>
       <p>{descripcion}</p>
-      <Button 
-      texto={botonTexto} 
-      color= "blue"
-      mensaje= {`Haz comprado ${titulo}`}
-      />
+      <button onClick={onClick}>{botonTexto}</button>
     </div>
   );
 }
